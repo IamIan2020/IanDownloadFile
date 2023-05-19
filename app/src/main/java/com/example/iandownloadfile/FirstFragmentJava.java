@@ -24,7 +24,7 @@ import java.util.TimeZone;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class FirstFragment extends Fragment {
+public class FirstFragmentJava extends Fragment {
     private Handler mHandler = new Handler(Looper.getMainLooper());
     protected SpInfo spInfo;
     protected String log = getClass().getSimpleName();
@@ -53,7 +53,7 @@ public class FirstFragment extends Fragment {
         binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment);
+                NavHostFragment.findNavController(FirstFragmentJava.this).navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
         });
 
