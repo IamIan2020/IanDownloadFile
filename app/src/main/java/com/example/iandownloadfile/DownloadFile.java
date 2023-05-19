@@ -110,12 +110,13 @@ public class DownloadFile {
                         Log.d("DownloadFile", "gilename.indexOf != -1");
                         unpackOK = setUnPackZip(path + File.separator + filename);
                     }
+                    baos.close();
                 }
+
                 zis.closeEntry();
             }
 
 //            unpackOK = true;
-//            ze.clone();
             zis.close();
             is.close();
         } catch (IOException e) {
@@ -127,6 +128,7 @@ public class DownloadFile {
             if (connection != null) {
                 connection.disconnect();
             }
+
         }
 
         return returnRes;
